@@ -1,0 +1,52 @@
+{
+  "data": [
+    {
+      "headerType": "personalCategories",
+      "data": [
+        { "iconName": "home_large", "label": "Home" },
+        { "iconName": "shop_large", "label": "Shop" },
+        { "iconName": "benefits_large", "label": "Benefits" },
+        { "iconName": "news_large", "label": "Discover & learn" },
+        { "iconName": "me_large", "label": "MySpark" },
+        { "iconName": "help_large", "label": "Help & support" },
+        { "iconName": "search_large", "label": "Search" }
+      ]
+    },
+    {
+      "headerType": "businessCategories",
+      "data": [
+        { "iconName": "home_large", "label": "Home" },
+        {
+          "iconName": "products_solutions_large",
+          "label": "Products & solutions"
+        },
+        { "iconName": "why_spark_large", "label": "Why Spark" },
+        {
+          "iconName": "insights_events_large",
+          "label": "Insights & events"
+        },
+        { "iconName": "me_large", "label": "MySpark" },
+        { "iconName": "help_large", "label": "Help & support" },
+        { "iconName": "search_large", "label": "Search" }
+      ]
+    },
+    {
+      "headerType": "personalCategoriesDesktop",
+      "data": [
+        { "iconName": "shop_large", "label": "Shop" },
+        { "iconName": "benefits_large", "label": "Benefits" },
+        { "iconName": "news_large", "label": "Discover & learn" },
+        { "iconName": "help_large", "label": "Help" }
+      ]
+    },
+    {
+      "headerType": "businessCategoriesDesktop",
+      "data": [
+        { "iconName": "shop_large", "label": "Shop" },
+        { "iconName": "benefits_large", "label": "Benefits" },
+        { "iconName": "news_large", "label": "Discover & learn" },
+        { "iconName": "help_large", "label": "Help" }
+      ]
+    }
+  ]
+}
