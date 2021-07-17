@@ -2,12 +2,19 @@
 ### Do not make changes to this file directly
 
 
+type Article {
+  content: String
+  id: String
+  title: String
+}
+
 type Category {
   iconName: String
   label: String
 }
 
 type Query {
+  Blog: [Article]!
   businessCategories: [Category]!
   businessCategoriesDesktop: [Category]!
   personalCategories: [Category]!

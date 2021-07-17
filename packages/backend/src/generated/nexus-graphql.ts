@@ -28,6 +28,11 @@ export interface NexusGenScalars {
 }
 
 export interface NexusGenObjects {
+  Article: { // root type
+    content?: string | null; // String
+    id?: string | null; // String
+    title?: string | null; // String
+  }
   Category: { // root type
     iconName?: string | null; // String
     label?: string | null; // String
@@ -46,11 +51,17 @@ export type NexusGenRootTypes = NexusGenObjects
 export type NexusGenAllTypes = NexusGenRootTypes & NexusGenScalars
 
 export interface NexusGenFieldTypes {
+  Article: { // field return type
+    content: string | null; // String
+    id: string | null; // String
+    title: string | null; // String
+  }
   Category: { // field return type
     iconName: string | null; // String
     label: string | null; // String
   }
   Query: { // field return type
+    Blog: Array<NexusGenRootTypes['Article'] | null>; // [Article]!
     businessCategories: Array<NexusGenRootTypes['Category'] | null>; // [Category]!
     businessCategoriesDesktop: Array<NexusGenRootTypes['Category'] | null>; // [Category]!
     personalCategories: Array<NexusGenRootTypes['Category'] | null>; // [Category]!
@@ -59,11 +70,17 @@ export interface NexusGenFieldTypes {
 }
 
 export interface NexusGenFieldTypeNames {
+  Article: { // field return type name
+    content: 'String'
+    id: 'String'
+    title: 'String'
+  }
   Category: { // field return type name
     iconName: 'String'
     label: 'String'
   }
   Query: { // field return type name
+    Blog: 'Article'
     businessCategories: 'Category'
     businessCategoriesDesktop: 'Category'
     personalCategories: 'Category'
