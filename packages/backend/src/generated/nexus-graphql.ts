@@ -61,7 +61,7 @@ export interface NexusGenFieldTypes {
     label: string | null; // String
   }
   Query: { // field return type
-    Blog: Array<NexusGenRootTypes['Article'] | null>; // [Article]!
+    Blog: Array<NexusGenRootTypes['Article'] | null> | null; // [Article]
     businessCategories: Array<NexusGenRootTypes['Category'] | null>; // [Category]!
     businessCategoriesDesktop: Array<NexusGenRootTypes['Category'] | null>; // [Category]!
     personalCategories: Array<NexusGenRootTypes['Category'] | null>; // [Category]!

@@ -7,5 +7,5 @@ export const schema = makeSchema({
   outputs: {
     typegen: join(__dirname, '.', 'generated/nexus-graphql.ts'),
     schema: join(__dirname, '.', 'generated/graphql.ts'),
-  },
+  }
 });

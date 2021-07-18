@@ -12,13 +12,13 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "Title": {
+    "title": {
       "type": "string"
     },
-    "Content": {
+    "content": {
       "type": "richtext"
     },
-    "CoverImage": {
+    "coverImage": {
       "model": "file",
       "via": "related",
       "allowedTypes": [
@@ -30,7 +30,7 @@
       "required": false,
       "pluginOptions": {}
     },
-    "Excerpt": {
+    "excerpt": {
       "type": "text"
     }
   }

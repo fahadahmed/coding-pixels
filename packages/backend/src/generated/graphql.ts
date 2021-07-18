@@ -14,7 +14,7 @@ type Category {
 }
 
 type Query {
-  Blog: [Article]!
+  Blog: [Article]
   businessCategories: [Category]!
   businessCategoriesDesktop: [Category]!
   personalCategories: [Category]!

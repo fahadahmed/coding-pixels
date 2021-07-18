@@ -12,12 +12,11 @@ export const Article = objectType({
 export const BlogQuery = extendType({
   type: 'Query',
   definition(t) {
-    t.nonNull.list.field('Blog', {
+    t.nullable.list.field('Blog', {
       type: 'Article',
-      resolve() {
-        return [
-          { id: '1', title: 'Blog Title 1', content: 'Content of the blog article 1.' }
-        ]
+      async resolve(_, __, { dataSources: { blogAPI }}) {
+        const data = await blogAPI.getPosts();
+        return data;
       }
     })
   }
