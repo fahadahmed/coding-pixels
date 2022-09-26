@@ -8,11 +8,7 @@
   },
   "hosting": {
     "public": "public",
-    "ignore": [
-      "firebase.json",
-      "**/.*",
-      "**/node_modules/**"
-    ]
+    "ignore": ["firebase.json", "**/.*", "**/node_modules/**"]
   },
   "storage": {
     "rules": "storage.rules"
@@ -31,7 +27,7 @@
       "port": 9000
     },
     "hosting": {
-      "port": 5000
+      "port": 5010
     },
     "pubsub": {
       "port": 8085
