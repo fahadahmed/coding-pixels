@@ -1,14 +1,15 @@
 module.exports = ({ env }) => ({
-  defaultConnection: 'default',
+  defaultConnection: "default",
   connections: {
     default: {
-      connector: 'bookshelf',
+      connector: "firestore",
       settings: {
-        client: 'sqlite',
-        filename: env('DATABASE_FILENAME', '.tmp/data.db'),
+        projectId: "coding-pixels-2b3e0",
       },
       options: {
-        useNullAsDefault: true,
+        // Connect to a local running Firestore emulator
+        // when running in development mode
+        useEmulator: env("NODE_ENV") == "development",
       },
     },
   },
