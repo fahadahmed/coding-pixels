@@ -1,5 +1,5 @@
 import { json } from "@remix-run/node";
-import { useLoaderData } from "@remix-run/react";
+import { Link, useLoaderData } from "@remix-run/react";
 
 import { getPosts } from '~/api/post.server';
 
@@ -24,7 +24,9 @@ export default function Index() {
     <div style={{ fontFamily: "system-ui, sans-serif", lineHeight: "1.4" }}>
       <h1>Remix, Graphql + Firebase</h1>
       {posts.map((post: Post) => (
-        <li key={post.id}>{post.title}</li>
+        <li key={post.id}>
+          <Link to={post.slug}>{post.title}</Link>
+        </li>
       ))}
     </div>
   );
