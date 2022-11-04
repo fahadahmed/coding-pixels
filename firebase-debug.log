@@ -1,0 +1,218 @@
+[debug] [2022-11-04T17:48:36.117Z] ----------------------------------------------------------------------
+[debug] [2022-11-04T17:48:36.118Z] Command:       /Users/fahadahmed/.nvm/versions/node/v16.13.2/bin/node /Users/fahadahmed/.nvm/versions/node/v16.13.2/bin/firebase emulators:start
+[debug] [2022-11-04T17:48:36.118Z] CLI Version:   11.16.0
+[debug] [2022-11-04T17:48:36.118Z] Platform:      darwin
+[debug] [2022-11-04T17:48:36.118Z] Node Version:  v16.13.2
+[debug] [2022-11-04T17:48:36.119Z] Time:          Fri Nov 04 2022 23:18:36 GMT+0530 (India Standard Time)
+[debug] [2022-11-04T17:48:36.119Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2022-11-04T17:48:36.166Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2022-11-04T17:48:36.166Z] > authorizing via signed-in user (contact@fhdamd.dev)
+[debug] [2022-11-04T17:48:36.308Z] openjdk version "16.0.1" 2021-04-20
+
+[debug] [2022-11-04T17:48:36.308Z] OpenJDK Runtime Environment (build 16.0.1+9-24)
+OpenJDK 64-Bit Server VM (build 16.0.1+9-24, mixed mode, sharing)
+
+[debug] [2022-11-04T17:48:36.314Z] Parsed Java major version: 16
+[info] i  emulators: Starting emulators: auth, functions, firestore, pubsub, storage, eventarc {"metadata":{"emulator":{"name":"hub"},"message":"Starting emulators: auth, functions, firestore, pubsub, storage, eventarc"}}
+[debug] [2022-11-04T17:48:37.404Z] [logging] Logging Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2022-11-04T17:48:37.404Z] [auth] Authentication Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2022-11-04T17:48:37.404Z] [firestore] Firestore Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2022-11-04T17:48:37.404Z] [firestore.websocket] websocket server for firestore only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2022-11-04T17:48:37.404Z] [pubsub] Pub/Sub Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2022-11-04T17:48:37.404Z] [storage] Storage Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2022-11-04T17:48:37.404Z] assigned listening specs for emulators {"user":{"hub":[{"address":"127.0.0.1","family":"IPv4","port":4400},{"address":"::1","family":"IPv6","port":4400}],"ui":[{"address":"127.0.0.1","family":"IPv4","port":4000},{"address":"::1","family":"IPv6","port":4000}],"logging":[{"address":"127.0.0.1","family":"IPv4","port":4500}],"auth":[{"address":"127.0.0.1","family":"IPv4","port":9099}],"firestore":[{"address":"127.0.0.1","family":"IPv4","port":8080}],"firestore.websocket":[{"address":"127.0.0.1","family":"IPv4","port":9150}],"pubsub":[{"address":"127.0.0.1","family":"IPv4","port":8085}],"storage":[{"address":"127.0.0.1","family":"IPv4","port":9199}]},"metadata":{"message":"assigned listening specs for emulators"}}
+[debug] [2022-11-04T17:48:37.409Z] [hub] writing locator at /var/folders/3m/cnx97ctn6fg31ht_qlmv62080000gn/T/hub-coding-pixels-2b3e0.json
+[debug] [2022-11-04T17:48:37.682Z] [functions] Functions Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2022-11-04T17:48:37.682Z] [eventarc] Eventarc Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2022-11-04T17:48:37.682Z] late-assigned ports for functions and eventarc emulators {"user":{"hub":[{"address":"127.0.0.1","family":"IPv4","port":4400},{"address":"::1","family":"IPv6","port":4400}],"ui":[{"address":"127.0.0.1","family":"IPv4","port":4000},{"address":"::1","family":"IPv6","port":4000}],"logging":[{"address":"127.0.0.1","family":"IPv4","port":4500}],"auth":[{"address":"127.0.0.1","family":"IPv4","port":9099}],"firestore":[{"address":"127.0.0.1","family":"IPv4","port":8080}],"firestore.websocket":[{"address":"127.0.0.1","family":"IPv4","port":9150}],"pubsub":[{"address":"127.0.0.1","family":"IPv4","port":8085}],"storage":[{"address":"127.0.0.1","family":"IPv4","port":9199}],"functions":[{"address":"127.0.0.1","family":"IPv4","port":5001}],"eventarc":[{"address":"127.0.0.1","family":"IPv4","port":9299}]},"metadata":{"message":"late-assigned ports for functions and eventarc emulators"}}
+[warn] ⚠  functions: The following emulators are not running, calls to these services from the Functions emulator will affect production: database, hosting {"metadata":{"emulator":{"name":"functions"},"message":"The following emulators are not running, calls to these services from the Functions emulator will affect production: \u001b[1mdatabase, hosting\u001b[22m"}}
+[info] ✔  functions: Using node@16 from host. {"metadata":{"emulator":{"name":"functions"},"message":"Using node@16 from host."}}
+[debug] [2022-11-04T17:48:37.688Z] defaultcredentials: writing to file /Users/fahadahmed/.config/firebase/contact_fhdamd_dev_application_default_credentials.json
+[debug] [2022-11-04T17:48:37.690Z] Setting GAC to /Users/fahadahmed/.config/firebase/contact_fhdamd_dev_application_default_credentials.json {"metadata":{"emulator":{"name":"functions"},"message":"Setting GAC to /Users/fahadahmed/.config/firebase/contact_fhdamd_dev_application_default_credentials.json"}}
+[debug] [2022-11-04T17:48:37.691Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/coding-pixels-2b3e0/adminSdkConfig [none]
+[debug] [2022-11-04T17:48:38.224Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/coding-pixels-2b3e0/adminSdkConfig 200
+[debug] [2022-11-04T17:48:38.224Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/coding-pixels-2b3e0/adminSdkConfig {"projectId":"coding-pixels-2b3e0","databaseURL":"https://coding-pixels-2b3e0-default-rtdb.firebaseio.com","storageBucket":"coding-pixels-2b3e0.appspot.com","locationId":"australia-southeast1"}
+[debug] [2022-11-04T17:48:38.262Z] Ignoring unsupported arg: auto_download {"metadata":{"emulator":{"name":"firestore"},"message":"Ignoring unsupported arg: auto_download"}}
+[debug] [2022-11-04T17:48:38.262Z] Ignoring unsupported arg: single_project_mode_error {"metadata":{"emulator":{"name":"firestore"},"message":"Ignoring unsupported arg: single_project_mode_error"}}
+[debug] [2022-11-04T17:48:38.262Z] Starting Firestore Emulator with command {"binary":"java","args":["-Dgoogle.cloud_firestore.debug_log_level=FINE","-Duser.language=en","-jar","/Users/fahadahmed/.cache/firebase/emulators/cloud-firestore-emulator-v1.15.1.jar","--host","127.0.0.1","--port",8080,"--websocket_port",9150,"--project_id","coding-pixels-2b3e0","--rules","/Users/fahadahmed/development/coding-pixels/firestore.rules","--single_project_mode",true,"--functions_emulator","127.0.0.1:5001"],"optionalArgs":["port","webchannel_port","host","rules","websocket_port","functions_emulator","seed_from_export","project_id","single_project_mode"],"joinArgs":false} {"metadata":{"emulator":{"name":"firestore"},"message":"Starting Firestore Emulator with command {\"binary\":\"java\",\"args\":[\"-Dgoogle.cloud_firestore.debug_log_level=FINE\",\"-Duser.language=en\",\"-jar\",\"/Users/fahadahmed/.cache/firebase/emulators/cloud-firestore-emulator-v1.15.1.jar\",\"--host\",\"127.0.0.1\",\"--port\",8080,\"--websocket_port\",9150,\"--project_id\",\"coding-pixels-2b3e0\",\"--rules\",\"/Users/fahadahmed/development/coding-pixels/firestore.rules\",\"--single_project_mode\",true,\"--functions_emulator\",\"127.0.0.1:5001\"],\"optionalArgs\":[\"port\",\"webchannel_port\",\"host\",\"rules\",\"websocket_port\",\"functions_emulator\",\"seed_from_export\",\"project_id\",\"single_project_mode\"],\"joinArgs\":false}"}}
+[info] i  firestore: Firestore Emulator logging to firestore-debug.log {"metadata":{"emulator":{"name":"firestore"},"message":"Firestore Emulator logging to \u001b[1mfirestore-debug.log\u001b[22m"}}
+[debug] [2022-11-04T17:48:39.571Z] Nov 04, 2022 11:18:39 PM com.google.cloud.datastore.emulator.firestore.websocket.WebSocketServer start
+INFO: Started WebSocket server on ws://127.0.0.1:9150
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Nov 04, 2022 11:18:39 PM com.google.cloud.datastore.emulator.firestore.websocket.WebSocketServer start\nINFO: Started WebSocket server on ws://127.0.0.1:9150\n"}}
+[debug] [2022-11-04T17:48:39.590Z] API endpoint: http:// {"metadata":{"emulator":{"name":"firestore"},"message":"API endpoint: http://"}}
+[debug] [2022-11-04T17:48:39.590Z] 127.0.0.1:8080
+If you are using a library that supports the FIRESTORE_EMULATOR_HOST environment variable, run:
+ {"metadata":{"emulator":{"name":"firestore"},"message":"127.0.0.1:8080\nIf you are using a library that supports the FIRESTORE_EMULATOR_HOST environment variable, run:\n"}}
+[debug] [2022-11-04T17:48:39.591Z] 
+   export FIRESTORE_EMULATOR_HOST=127.0.0.1:8080
+
+Dev App Server is now running.
+
+ {"metadata":{"emulator":{"name":"firestore"},"message":"\n   export FIRESTORE_EMULATOR_HOST=127.0.0.1:8080\n\nDev App Server is now running.\n\n"}}
+[info] ✔  firestore: Firestore Emulator UI websocket is running on 9150. {"metadata":{"emulator":{"name":"firestore"},"message":"Firestore Emulator UI websocket is running on 9150."}}
+[debug] [2022-11-04T17:48:42.573Z] Ignoring unsupported arg: projectId {"metadata":{"emulator":{"name":"pubsub"},"message":"Ignoring unsupported arg: projectId"}}
+[debug] [2022-11-04T17:48:42.573Z] Ignoring unsupported arg: auto_download {"metadata":{"emulator":{"name":"pubsub"},"message":"Ignoring unsupported arg: auto_download"}}
+[debug] [2022-11-04T17:48:42.573Z] Starting Pub/Sub Emulator with command {"binary":"/Users/fahadahmed/.cache/firebase/emulators/pubsub-emulator-0.1.0/pubsub-emulator/bin/cloud-pubsub-emulator","args":["--host=127.0.0.1","--port=8085"],"optionalArgs":["port","host"],"joinArgs":true} {"metadata":{"emulator":{"name":"pubsub"},"message":"Starting Pub/Sub Emulator with command {\"binary\":\"/Users/fahadahmed/.cache/firebase/emulators/pubsub-emulator-0.1.0/pubsub-emulator/bin/cloud-pubsub-emulator\",\"args\":[\"--host=127.0.0.1\",\"--port=8085\"],\"optionalArgs\":[\"port\",\"host\"],\"joinArgs\":true}"}}
+[info] i  pubsub: Pub/Sub Emulator logging to pubsub-debug.log {"metadata":{"emulator":{"name":"pubsub"},"message":"Pub/Sub Emulator logging to \u001b[1mpubsub-debug.log\u001b[22m"}}
+[debug] [2022-11-04T17:48:42.759Z] This is the Google Pub/Sub fake.
+ {"metadata":{"emulator":{"name":"pubsub"},"message":"This is the Google Pub/Sub fake.\n"}}
+[debug] [2022-11-04T17:48:42.759Z] Implementation may be incomplete or differ from the real system.
+ {"metadata":{"emulator":{"name":"pubsub"},"message":"Implementation may be incomplete or differ from the real system.\n"}}
+[debug] [2022-11-04T17:48:42.838Z] Nov 04, 2022 11:18:42 PM com.google.cloud.pubsub.testing.v1.Main main
+INFO: IAM integration is disabled. IAM policy methods and ACL checks are not supported
+ {"metadata":{"emulator":{"name":"pubsub"},"message":"Nov 04, 2022 11:18:42 PM com.google.cloud.pubsub.testing.v1.Main main\nINFO: IAM integration is disabled. IAM policy methods and ACL checks are not supported\n"}}
+[debug] [2022-11-04T17:48:43.284Z] Nov 04, 2022 11:18:43 PM io.gapi.emulators.netty.NettyUtil applyJava7LongHostnameWorkaround
+INFO: Unable to apply Java 7 long hostname workaround.
+ {"metadata":{"emulator":{"name":"pubsub"},"message":"Nov 04, 2022 11:18:43 PM io.gapi.emulators.netty.NettyUtil applyJava7LongHostnameWorkaround\nINFO: Unable to apply Java 7 long hostname workaround.\n"}}
+[debug] [2022-11-04T17:48:43.565Z] Nov 04, 2022 11:18:43 PM com.google.cloud.pubsub.testing.v1.Main main
+INFO: Server started, listening on 8085
+ {"metadata":{"emulator":{"name":"pubsub"},"message":"Nov 04, 2022 11:18:43 PM com.google.cloud.pubsub.testing.v1.Main main\nINFO: Server started, listening on 8085\n"}}
+[debug] [2022-11-04T17:48:43.590Z] Ignoring unsupported arg: port {"metadata":{"emulator":{"name":"storage"},"message":"Ignoring unsupported arg: port"}}
+[debug] [2022-11-04T17:48:43.650Z] Nov 04, 2022 11:18:43 PM io.gapi.emulators.grpc.GrpcServer$3 operationComplete
+INFO: Adding handler(s) to newly registered Channel.
+ {"metadata":{"emulator":{"name":"pubsub"},"message":"Nov 04, 2022 11:18:43 PM io.gapi.emulators.grpc.GrpcServer$3 operationComplete\nINFO: Adding handler(s) to newly registered Channel.\n"}}
+[debug] [2022-11-04T17:48:45.122Z] Temp file directory for storage emulator: /var/folders/3m/cnx97ctn6fg31ht_qlmv62080000gn/T/firebase/storage/blobs {"metadata":{"emulator":{"name":"storage"},"message":"Temp file directory for storage emulator: /var/folders/3m/cnx97ctn6fg31ht_qlmv62080000gn/T/firebase/storage/blobs"}}
+[debug] [2022-11-04T17:48:45.126Z] Ignoring unsupported arg: auto_download {"metadata":{"emulator":{"name":"ui"},"message":"Ignoring unsupported arg: auto_download"}}
+[debug] [2022-11-04T17:48:45.127Z] Ignoring unsupported arg: port {"metadata":{"emulator":{"name":"ui"},"message":"Ignoring unsupported arg: port"}}
+[debug] [2022-11-04T17:48:45.127Z] Starting Emulator UI with command {"binary":"node","args":["/Users/fahadahmed/.cache/firebase/emulators/ui-v1.11.1/server/server.js"],"optionalArgs":[],"joinArgs":false} {"metadata":{"emulator":{"name":"ui"},"message":"Starting Emulator UI with command {\"binary\":\"node\",\"args\":[\"/Users/fahadahmed/.cache/firebase/emulators/ui-v1.11.1/server/server.js\"],\"optionalArgs\":[],\"joinArgs\":false}"}}
+[info] i  ui: Emulator UI logging to ui-debug.log {"metadata":{"emulator":{"name":"ui"},"message":"Emulator UI logging to \u001b[1mui-debug.log\u001b[22m"}}
+[debug] [2022-11-04T17:48:45.188Z] Web / API server started at 127.0.0.1:4000
+ {"metadata":{"emulator":{"name":"ui"},"message":"Web / API server started at 127.0.0.1:4000\n"}}
+[debug] [2022-11-04T17:48:45.188Z] Web / API server started at ::1:4000
+ {"metadata":{"emulator":{"name":"ui"},"message":"Web / API server started at ::1:4000\n"}}
+[info] i  functions: Watching "/Users/fahadahmed/development/coding-pixels/functions" for Cloud Functions... {"metadata":{"emulator":{"name":"functions"},"message":"Watching \"/Users/fahadahmed/development/coding-pixels/functions\" for Cloud Functions..."}}
+[debug] [2022-11-04T17:48:45.395Z] Validating nodejs source
+[warn] ⚠  functions: package.json indicates an outdated version of firebase-functions. Please upgrade using npm install --save firebase-functions@latest in your functions directory. 
+[warn] ⚠  functions: Please note that there will be breaking changes when you upgrade. 
+[debug] [2022-11-04T17:48:46.071Z] > [functions] package.json contents: {
+  "name": "functions",
+  "scripts": {
+    "build": "tsc",
+    "build:watch": "tsc --watch",
+    "serve": "npm run build && firebase emulators:start --only functions",
+    "shell": "npm run build && firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "16"
+  },
+  "main": "lib/index.js",
+  "dependencies": {
+    "firebase-admin": "^10.2.0",
+    "firebase-functions": "^3.21.0"
+  },
+  "devDependencies": {
+    "typescript": "^4.6.4"
+  },
+  "private": true
+}
+[debug] [2022-11-04T17:48:46.071Z] Building nodejs source
+[debug] [2022-11-04T17:48:46.072Z] Analyzing nodejs backend spec
+[debug] [2022-11-04T17:48:46.073Z] Could not find functions.yaml. Must use http discovery
+[debug] [2022-11-04T17:48:46.123Z] Nov 04, 2022 11:18:46 PM com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler initChannel
+INFO: Connected to new websocket client
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Nov 04, 2022 11:18:46 PM com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler initChannel\nINFO: Connected to new websocket client\n"}}
+[debug] [2022-11-04T17:48:46.532Z] Serving at port 9005
+
+[debug] [2022-11-04T17:48:46.557Z] Got response from /__/functions.yaml {"endpoints":{"helloWorld":{"platform":"gcfv1","httpsTrigger":{},"entryPoint":"helloWorld"}},"specVersion":"v1alpha1","requiredAPIs":[]}
+[debug] [2022-11-04T17:48:46.562Z] shutdown requested via /__/quitquitquit
+
+[info] ✔  functions: Loaded functions definitions from source: helloWorld. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: helloWorld."}}
+[info] ✔  functions[us-central1-helloWorld]: http function initialized (http://127.0.0.1:5001/coding-pixels-2b3e0/us-central1/helloWorld). {"metadata":{"emulator":{"name":"functions"},"message":"\u001b[1mhttp\u001b[22m function initialized (http://127.0.0.1:5001/coding-pixels-2b3e0/us-central1/helloWorld)."}}
+[info] 
+┌─────────────────────────────────────────────────────────────┐
+│ ✔  All emulators ready! It is now safe to connect your app. │
+│ i  View Emulator UI at http://127.0.0.1:4000/               │
+└─────────────────────────────────────────────────────────────┘
+
+┌────────────────┬────────────────┬─────────────────────────────────┐
+│ Emulator       │ Host:Port      │ View in Emulator UI             │
+├────────────────┼────────────────┼─────────────────────────────────┤
+│ Authentication │ 127.0.0.1:9099 │ http://127.0.0.1:4000/auth      │
+├────────────────┼────────────────┼─────────────────────────────────┤
+│ Functions      │ 127.0.0.1:5001 │ http://127.0.0.1:4000/functions │
+├────────────────┼────────────────┼─────────────────────────────────┤
+│ Firestore      │ 127.0.0.1:8080 │ http://127.0.0.1:4000/firestore │
+├────────────────┼────────────────┼─────────────────────────────────┤
+│ Pub/Sub        │ 127.0.0.1:8085 │ n/a                             │
+├────────────────┼────────────────┼─────────────────────────────────┤
+│ Storage        │ 127.0.0.1:9199 │ http://127.0.0.1:4000/storage   │
+├────────────────┼────────────────┼─────────────────────────────────┤
+│ Eventarc       │ 127.0.0.1:9299 │ n/a                             │
+└────────────────┴────────────────┴─────────────────────────────────┘
+  Emulator Hub running at 127.0.0.1:4400
+  Other reserved ports: 4500, 9150
+
+Issues? Report them at https://github.com/firebase/firebase-tools/issues and attach the *-debug.log files.
+ 
+[debug] [2022-11-04T17:48:56.155Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2022-11-04T17:48:56.155Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2022-11-04T17:48:56.156Z] Accepted request GET /coding-pixels-2b3e0/us-central1/helloWorld --> us-central1-helloWorld
+[debug] [2022-11-04T17:48:56.162Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2022-11-04T17:48:56.162Z] [functions] Got req.url=/coding-pixels-2b3e0/us-central1/helloWorld, mapping to path=/ {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/coding-pixels-2b3e0/us-central1/helloWorld, mapping to path=/"}}
+[debug] [2022-11-04T17:48:56.172Z] [worker-pool] addWorker(us-central1-helloWorld) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] addWorker(us-central1-helloWorld)"}}
+[debug] [2022-11-04T17:48:56.173Z] [worker-pool] Adding worker with key us-central1-helloWorld, total=1 {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] Adding worker with key us-central1-helloWorld, total=1"}}
+[debug] [2022-11-04T17:48:56.672Z] [runtime-status] [51343] Resolved module firebase-admin {"declared":true,"installed":true,"version":"10.3.0","resolution":"/Users/fahadahmed/development/coding-pixels/functions/node_modules/firebase-admin/lib/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-helloWorld"},"extension":{},"message":"[runtime-status] [51343] Resolved module firebase-admin {\"declared\":true,\"installed\":true,\"version\":\"10.3.0\",\"resolution\":\"/Users/fahadahmed/development/coding-pixels/functions/node_modules/firebase-admin/lib/index.js\"}"}}
+[debug] [2022-11-04T17:48:56.672Z] [runtime-status] [51343] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.24.1","resolution":"/Users/fahadahmed/development/coding-pixels/functions/node_modules/firebase-functions/lib/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-helloWorld"},"extension":{},"message":"[runtime-status] [51343] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"3.24.1\",\"resolution\":\"/Users/fahadahmed/development/coding-pixels/functions/node_modules/firebase-functions/lib/index.js\"}"}}
+[debug] [2022-11-04T17:48:56.672Z] [runtime-status] [51343] Outgoing network have been stubbed. [{"name":"http","status":"mocked"},{"name":"http","status":"mocked"},{"name":"https","status":"mocked"},{"name":"https","status":"mocked"},{"name":"net","status":"mocked"}] {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-helloWorld"},"extension":{},"message":"[runtime-status] [51343] Outgoing network have been stubbed. [{\"name\":\"http\",\"status\":\"mocked\"},{\"name\":\"http\",\"status\":\"mocked\"},{\"name\":\"https\",\"status\":\"mocked\"},{\"name\":\"https\",\"status\":\"mocked\"},{\"name\":\"net\",\"status\":\"mocked\"}]"}}
+[debug] [2022-11-04T17:48:56.673Z] [runtime-status] [51343] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.24.1","resolution":"/Users/fahadahmed/development/coding-pixels/functions/node_modules/firebase-functions/lib/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-helloWorld"},"extension":{},"message":"[runtime-status] [51343] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"3.24.1\",\"resolution\":\"/Users/fahadahmed/development/coding-pixels/functions/node_modules/firebase-functions/lib/index.js\"}"}}
+[debug] [2022-11-04T17:48:56.691Z] [runtime-status] [51343] Checked functions.config() {"config":{}} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-helloWorld"},"extension":{},"message":"[runtime-status] [51343] Checked functions.config() {\"config\":{}}"}}
+[debug] [2022-11-04T17:48:56.692Z] [runtime-status] [51343] firebase-functions has been stubbed. {"functionsResolution":{"declared":true,"installed":true,"version":"3.24.1","resolution":"/Users/fahadahmed/development/coding-pixels/functions/node_modules/firebase-functions/lib/index.js"}} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-helloWorld"},"extension":{},"message":"[runtime-status] [51343] firebase-functions has been stubbed. {\"functionsResolution\":{\"declared\":true,\"installed\":true,\"version\":\"3.24.1\",\"resolution\":\"/Users/fahadahmed/development/coding-pixels/functions/node_modules/firebase-functions/lib/index.js\"}}"}}
+[debug] [2022-11-04T17:48:56.692Z] [runtime-status] [51343] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.24.1","resolution":"/Users/fahadahmed/development/coding-pixels/functions/node_modules/firebase-functions/lib/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-helloWorld"},"extension":{},"message":"[runtime-status] [51343] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"3.24.1\",\"resolution\":\"/Users/fahadahmed/development/coding-pixels/functions/node_modules/firebase-functions/lib/index.js\"}"}}
+[debug] [2022-11-04T17:48:56.692Z] [runtime-status] [51343] Resolved module firebase-admin {"declared":true,"installed":true,"version":"10.3.0","resolution":"/Users/fahadahmed/development/coding-pixels/functions/node_modules/firebase-admin/lib/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-helloWorld"},"extension":{},"message":"[runtime-status] [51343] Resolved module firebase-admin {\"declared\":true,\"installed\":true,\"version\":\"10.3.0\",\"resolution\":\"/Users/fahadahmed/development/coding-pixels/functions/node_modules/firebase-admin/lib/index.js\"}"}}
+[debug] [2022-11-04T17:48:56.692Z] [runtime-status] [51343] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.24.1","resolution":"/Users/fahadahmed/development/coding-pixels/functions/node_modules/firebase-functions/lib/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-helloWorld"},"extension":{},"message":"[runtime-status] [51343] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"3.24.1\",\"resolution\":\"/Users/fahadahmed/development/coding-pixels/functions/node_modules/firebase-functions/lib/index.js\"}"}}
+[debug] [2022-11-04T17:48:56.692Z] [runtime-status] [51343] firebase-admin has been stubbed. {"adminResolution":{"declared":true,"installed":true,"version":"10.3.0","resolution":"/Users/fahadahmed/development/coding-pixels/functions/node_modules/firebase-admin/lib/index.js"}} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-helloWorld"},"extension":{},"message":"[runtime-status] [51343] firebase-admin has been stubbed. {\"adminResolution\":{\"declared\":true,\"installed\":true,\"version\":\"10.3.0\",\"resolution\":\"/Users/fahadahmed/development/coding-pixels/functions/node_modules/firebase-admin/lib/index.js\"}}"}}
+[debug] [2022-11-04T17:48:56.695Z] [runtime-status] [51343] Functions runtime initialized. {"cwd":"/Users/fahadahmed/development/coding-pixels/functions","node_version":"16.13.2"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-helloWorld"},"extension":{},"message":"[runtime-status] [51343] Functions runtime initialized. {\"cwd\":\"/Users/fahadahmed/development/coding-pixels/functions\",\"node_version\":\"16.13.2\"}"}}
+[debug] [2022-11-04T17:48:56.695Z] [runtime-status] [51343] Listening to port: /var/folders/3m/cnx97ctn6fg31ht_qlmv62080000gn/T/fire_emu_9df4cd2c192079f6.sock {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-helloWorld"},"extension":{},"message":"[runtime-status] [51343] Listening to port: /var/folders/3m/cnx97ctn6fg31ht_qlmv62080000gn/T/fire_emu_9df4cd2c192079f6.sock"}}
+[debug] [2022-11-04T17:48:56.785Z] [worker-us-central1-helloWorld-55fea23b-d9c5-44e5-80ce-3fcf71fa5782]: IDLE {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-helloWorld-55fea23b-d9c5-44e5-80ce-3fcf71fa5782]: IDLE"}}
+[debug] [2022-11-04T17:48:56.786Z] [worker-pool] submitRequest(triggerId=us-central1-helloWorld) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-helloWorld)"}}
+[debug] [2022-11-04T17:48:56.786Z] [worker-us-central1-helloWorld-55fea23b-d9c5-44e5-80ce-3fcf71fa5782]: BUSY {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-helloWorld-55fea23b-d9c5-44e5-80ce-3fcf71fa5782]: BUSY"}}
+[info] i  functions: Beginning execution of "helloWorld" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-helloWorld"},"extension":{},"message":"Beginning execution of \"helloWorld\""}}
+[info] >  {"structuredData":true,"severity":"INFO","message":"Hello logs!"} {"user":{"structuredData":true,"severity":"INFO","message":"Hello logs!"},"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-helloWorld"},"extension":{},"message":"\u001b[90m> \u001b[39m {\"structuredData\":true,\"severity\":\"INFO\",\"message\":\"Hello logs!\"}"}}
+[debug] [2022-11-04T17:48:56.792Z] [worker-us-central1-helloWorld-55fea23b-d9c5-44e5-80ce-3fcf71fa5782]: IDLE {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-helloWorld-55fea23b-d9c5-44e5-80ce-3fcf71fa5782]: IDLE"}}
+[debug] [2022-11-04T17:48:56.792Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[info] i  functions: Finished "helloWorld" in 2.039ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-helloWorld"},"extension":{},"message":"Finished \"helloWorld\" in 2.039ms"}}
+[debug] [2022-11-04T17:49:28.073Z] File /Users/fahadahmed/development/coding-pixels/functions/src/index.ts changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/fahadahmed/development/coding-pixels/functions/src/index.ts changed, reloading triggers"}}
+[debug] [2022-11-04T17:49:29.077Z] Validating nodejs source
+[warn] ⚠  functions: package.json indicates an outdated version of firebase-functions. Please upgrade using npm install --save firebase-functions@latest in your functions directory. 
+[warn] ⚠  functions: Please note that there will be breaking changes when you upgrade. 
+[debug] [2022-11-04T17:49:29.770Z] > [functions] package.json contents: {
+  "name": "functions",
+  "scripts": {
+    "build": "tsc",
+    "build:watch": "tsc --watch",
+    "serve": "npm run build && firebase emulators:start --only functions",
+    "shell": "npm run build && firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "16"
+  },
+  "main": "lib/index.js",
+  "dependencies": {
+    "firebase-admin": "^10.2.0",
+    "firebase-functions": "^3.21.0"
+  },
+  "devDependencies": {
+    "typescript": "^4.6.4"
+  },
+  "private": true
+}
+[debug] [2022-11-04T17:49:29.770Z] Building nodejs source
+[debug] [2022-11-04T17:49:29.770Z] Analyzing nodejs backend spec
+[debug] [2022-11-04T17:49:29.771Z] Could not find functions.yaml. Must use http discovery
+[debug] [2022-11-04T17:49:29.853Z] Serving at port 9005
+
+[debug] [2022-11-04T17:49:29.880Z] Got response from /__/functions.yaml {"endpoints":{"helloWorld":{"platform":"gcfv1","httpsTrigger":{},"entryPoint":"helloWorld"}},"specVersion":"v1alpha1","requiredAPIs":[]}
+[debug] [2022-11-04T17:49:29.883Z] shutdown requested via /__/quitquitquit
+
+[info] ✔  functions: Loaded functions definitions from source: helloWorld. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: helloWorld."}}
+[debug] [2022-11-04T17:49:29.889Z] [worker-pool] Shutting down IDLE worker (us-central1-helloWorld) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] Shutting down IDLE worker (us-central1-helloWorld)"}}
+[debug] [2022-11-04T17:49:29.889Z] [worker-us-central1-helloWorld-55fea23b-d9c5-44e5-80ce-3fcf71fa5782]: FINISHING {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-helloWorld-55fea23b-d9c5-44e5-80ce-3fcf71fa5782]: FINISHING"}}
+[debug] [2022-11-04T17:49:29.892Z] [worker-us-central1-helloWorld-55fea23b-d9c5-44e5-80ce-3fcf71fa5782]: exited {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-helloWorld-55fea23b-d9c5-44e5-80ce-3fcf71fa5782]: exited"}}
+[debug] [2022-11-04T17:49:29.892Z] [worker-us-central1-helloWorld-55fea23b-d9c5-44e5-80ce-3fcf71fa5782]: FINISHED {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-helloWorld-55fea23b-d9c5-44e5-80ce-3fcf71fa5782]: FINISHED"}}
