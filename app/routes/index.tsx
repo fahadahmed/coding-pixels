@@ -7,7 +7,7 @@ export const loader = async () => {
 
   const query = gql`
     query {
-      posts {
+      getPosts {
         id
         title
         tags
@@ -18,7 +18,7 @@ export const loader = async () => {
   `;
   const res = await graphqlClient().query({ query });
   return json({
-    posts: res.data.posts
+    posts: res.data.getPosts
   })
 }
 

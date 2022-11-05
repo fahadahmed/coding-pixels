@@ -54,7 +54,8 @@ const schema = buildSchema(`
   }
   type Query {
     hello: String
-    posts: [Post]
+    getPosts: [Post]
+    getPost(slug: String!): Post
   }
 `);
 
@@ -62,8 +63,11 @@ var root = {
   hello: () => {
     return 'Hello World';
   },
-  posts: () => {
+  getPosts: () => {
     return posts;
+  },
+  getPost: (args: any) => {
+    return posts.find((post) => post.slug === args.slug);
   },
 };
 
