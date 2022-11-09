@@ -4,12 +4,6 @@ import { gql } from 'apollo-server-express';
 import type { Config } from 'apollo-server-cloud-functions';
 import { ApolloServer } from 'apollo-server-cloud-functions';
 
-// const express = require('express');
-// const { graphqlHTTP } = require('express-graphql');
-// const { buildSchema } = require('graphql');
-
-// const app = express();
-
 const posts = [
   {
     title: 'Dark/Light Theme using React, Emotion and Typescript',
@@ -48,21 +42,6 @@ const posts = [
   },
 ];
 
-// const schema = buildSchema(`
-//   type Post {
-//     title: String
-//     slug: String
-//     tags: [String]
-//     content: String
-//     id: Int
-//   }
-//   type Query {
-//     hello: String
-//     getPosts: [Post]
-//     getPost(slug: String!): Post
-//   }
-// `);
-
 const typeDefs = gql`
   type Post {
     title: String
@@ -74,14 +53,16 @@ const typeDefs = gql`
 
   type Query {
     getPosts: [Post]
-    getPost(slug: String): Post
+    getPost(slug: String!): Post
   }
 `;
 
 const resolvers = {
   Query: {
     getPosts: () => posts,
-    getPost: (args: any) => posts.find((post) => post.slug === args.slug),
+    getPost: (parent: any, args: any, context: any, info: any) => {
+      return posts.find((post) => post.slug === args.slug);
+    },
   },
 };
 
@@ -92,26 +73,5 @@ const graphqlConfig: Config<ExpressContext> = {
 
 const server = new ApolloServer(graphqlConfig);
 const handler = server.createHandler();
-
-// var root = {
-//   hello: () => {
-//     return 'Hello World';
-//   },
-//   getPosts: () => {
-//     return posts;
-//   },
-//   getPost: (args: any) => {
-//     return posts.find((post) => post.slug === args.slug);
-//   },
-// };
-
-// app.use(
-//   '/',
-//   graphqlHTTP({
-//     schema: schema,
-//     rootValue: root,
-//     graphiql: true,
-//   })
-// );
 
 exports.graphql = functions.https.onRequest(handler as any);
