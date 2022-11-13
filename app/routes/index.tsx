@@ -33,6 +33,15 @@ export type Post = {
 export default function Index() {
 
   const { posts } = useLoaderData();
+
+  if (posts === null) {
+    return (
+      <div style={{ fontFamily: "system-ui, sans-serif", lineHeight: "1.4" }}>
+        <h1>Remix, Graphql + Firebase</h1>
+        <p>Currently there are no posts added to the backend. Please add a few posts to see them here.</p>
+      </div>
+    )
+  }
   return (
     <div style={{ fontFamily: "system-ui, sans-serif", lineHeight: "1.4" }}>
       <h1>Remix, Graphql + Firebase</h1>
