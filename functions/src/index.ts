@@ -1,10 +1,12 @@
 import * as functions from 'firebase-functions';
+import type { ExpressContext } from 'apollo-server-express';
+import { gql } from 'apollo-server-express';
+import type { Config } from 'apollo-server-cloud-functions';
+import { ApolloServer } from 'apollo-server-cloud-functions';
+import * as admin from 'firebase-admin';
 
-const express = require('express');
-const { graphqlHTTP } = require('express-graphql');
-const { buildSchema } = require('graphql');
-
-const app = express();
+admin.initializeApp(functions.config().firebase);
+const db = admin.firestore();
 
 const posts = [
   {
@@ -44,36 +46,43 @@ const posts = [
   },
 ];
 
-const schema = buildSchema(`
+const typeDefs = gql`
   type Post {
     title: String
     slug: String
     tags: [String]
     content: String
-    id: Int
+    id: String
   }
-  type Query {
-    hello: String
-    posts: [Post]
-  }
-`);
 
-var root = {
-  hello: () => {
-    return 'Hello World';
-  },
-  posts: () => {
-    return posts;
+  type Query {
+    getPosts: [Post]
+    getPost(slug: String!): Post
+  }
+`;
+
+const resolvers = {
+  Query: {
+    getPosts: async () => {
+      const snapshot = await db.collection('posts').get();
+      const posts: any = [];
+      snapshot.forEach((doc) => {
+        posts.push({ id: doc.id, ...doc.data() });
+      });
+      return posts;
+    },
+    getPost: (parent: any, args: any, context: any, info: any) => {
+      return posts.find((post) => post.slug === args.slug);
+    },
   },
 };
 
-app.use(
-  '/',
-  graphqlHTTP({
-    schema: schema,
-    rootValue: root,
-    graphiql: true,
-  })
-);
+const graphqlConfig: Config<ExpressContext> = {
+  typeDefs,
+  resolvers,
+};
 
-exports.graphql = functions.https.onRequest(app);
+const server = new ApolloServer(graphqlConfig);
+const handler = server.createHandler();
+
+exports.graphql = functions.https.onRequest(handler as any);

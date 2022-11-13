@@ -1,11 +1,24 @@
 import { json } from "@remix-run/node";
 import { Link, useLoaderData } from "@remix-run/react";
-
-import { getPosts } from '~/api/post.server';
+import { gql } from "@apollo/client";
+import graphqlClient from "~/api/client";
 
 export const loader = async () => {
+
+  const query = gql`
+    query {
+      getPosts {
+        id
+        title
+        tags
+        slug
+        content
+      }
+    }
+  `;
+  const res = await graphqlClient().query({ query });
   return json({
-    posts: await getPosts()
+    posts: res.data.getPosts
   })
 }
 
