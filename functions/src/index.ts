@@ -3,6 +3,10 @@ import type { ExpressContext } from 'apollo-server-express';
 import { gql } from 'apollo-server-express';
 import type { Config } from 'apollo-server-cloud-functions';
 import { ApolloServer } from 'apollo-server-cloud-functions';
+import * as admin from 'firebase-admin';
+
+admin.initializeApp(functions.config().firebase);
+const db = admin.firestore();
 
 const posts = [
   {
@@ -48,7 +52,7 @@ const typeDefs = gql`
     slug: String
     tags: [String]
     content: String
-    id: Int
+    id: String
   }
 
   type Query {
@@ -59,7 +63,14 @@ const typeDefs = gql`
 
 const resolvers = {
   Query: {
-    getPosts: () => posts,
+    getPosts: async () => {
+      const snapshot = await db.collection('posts').get();
+      const posts: any = [];
+      snapshot.forEach((doc) => {
+        posts.push({ id: doc.id, ...doc.data() });
+      });
+      return posts;
+    },
     getPost: (parent: any, args: any, context: any, info: any) => {
       return posts.find((post) => post.slug === args.slug);
     },
