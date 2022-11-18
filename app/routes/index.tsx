@@ -45,11 +45,13 @@ export default function Index() {
   return (
     <div style={{ fontFamily: "system-ui, sans-serif", lineHeight: "1.4" }}>
       <h1>Remix, Graphql + Firebase</h1>
-      {posts.map((post: Post) => (
-        <li key={post.id}>
-          <Link to={post.slug}>{post.title}</Link>
-        </li>
-      ))}
+      <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr' }}>
+        {posts.map((post: Post) => (
+          <div key={post.id}>
+            <Link to={post.slug}>{post.title}</Link>
+          </div>
+        ))}
+      </div>
     </div>
   );
 }
