@@ -5,12 +5,7 @@ import {
 } from 'firebase-admin/app';
 import { initializeApp } from 'firebase/app';
 
-import {
-  signInWithEmailAndPassword,
-  getAuth,
-  signOut,
-  connectAuthEmulator,
-} from 'firebase/auth';
+import { signInWithEmailAndPassword, getAuth, signOut } from 'firebase/auth';
 
 require('dotenv').config();
 
@@ -35,13 +30,11 @@ if (!admin.apps.length) {
 const db = admin.firestore();
 const adminAuth = admin.auth();
 
+// export const FIREBASE_AUTH_EMULATOR_HOST = 'localhost:9099';
+
 let Firebase: any;
 if (!Firebase?.apps?.length) {
   Firebase = initializeApp(firebaseConfig);
-}
-
-if (location.hostname === 'localhost') {
-  connectAuthEmulator(getAuth(), 'http://localhost:9099');
 }
 
 async function signIn(email: string, password: string) {
@@ -49,13 +42,19 @@ async function signIn(email: string, password: string) {
   return signInWithEmailAndPassword(auth, email, password);
 }
 
-async function getSessionToken(idToken: string) {
-  const decodedToken = await adminAuth.verifyIdToken(idToken);
-  if (new Date().getTime() / 1000 - decodedToken.auth_time > 5 * 60) {
-    throw new Error('Recent sign in required');
+async function getSessionToken(idToken: any) {
+  const token = await idToken;
+  console.log('authToken', token);
+  try {
+    const decodedToken = await adminAuth.verifyIdToken(token);
+    if (new Date().getTime() / 1000 - decodedToken.auth_time > 5 * 60) {
+      throw new Error('Recent sign in required');
+    }
+    const twoWeeks = 60 * 60 * 24 * 14 * 1000;
+    return adminAuth.createSessionCookie(idToken, { expiresIn: twoWeeks });
+  } catch (error: any) {
+    throw new Error(error);
   }
-  const twoWeeks = 60 * 60 * 24 * 14 * 1000;
-  return adminAuth.createSessionCookie(idToken, { expiresIn: twoWeeks });
 }
 
 async function signOutFirebase() {

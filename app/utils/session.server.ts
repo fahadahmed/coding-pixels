@@ -1,5 +1,5 @@
 import { createCookieSessionStorage, redirect } from '@remix-run/node';
-import { getSessionToken, signOutFirebase, adminAuth } from './firebase';
+import { getSessionToken, signOutFirebase, adminAuth } from './firebase.server';
 
 require('dotenv').config();
 
@@ -37,6 +37,7 @@ async function getUserSession(request: Request) {
   const token = cookieSession.get('token');
   if (!token) return null;
   try {
+    console.log('Do we get here');
     const tokenUser = await adminAuth.verifySessionCookie(token, true);
     return tokenUser;
   } catch (error) {
