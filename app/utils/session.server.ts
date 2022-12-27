@@ -9,6 +9,8 @@ if (!sessionSecret) {
   throw new Error('SESSION_SECRET must be set');
 }
 
+export const FIREBASE_AUTH_EMULATOR_HOST = 'localhost:9099';
+
 const storage = createCookieSessionStorage({
   cookie: {
     name: '__session',
