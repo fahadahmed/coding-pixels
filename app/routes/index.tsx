@@ -2,6 +2,7 @@ import { json } from "@remix-run/node";
 import { Link, useLoaderData } from "@remix-run/react";
 import { gql } from "@apollo/client";
 import graphqlClient from "~/api/client";
+import type { Post } from "~/types/post";
 
 export const loader = async () => {
 
@@ -20,14 +21,6 @@ export const loader = async () => {
   return json({
     posts: res.data.getPosts
   })
-}
-
-export type Post = {
-  title: string,
-  slug: string,
-  tags: Array<string>,
-  content: string,
-  id: number
 }
 
 export default function Index() {
