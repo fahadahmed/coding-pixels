@@ -30,10 +30,10 @@ if (!admin.apps.length) {
 const db = admin.firestore();
 const adminAuth = admin.auth();
 
-// export const FIREBASE_AUTH_EMULATOR_HOST = 'localhost:9099';
+export const FIREBASE_AUTH_EMULATOR_HOST = 'localhost:9099';
 
 let Firebase: any;
-if (!Firebase?.apps?.length) {
+if (!Firebase?.apps.length) {
   Firebase = initializeApp(firebaseConfig);
 }
 

@@ -1,17 +1,27 @@
-import type { ActionArgs } from '@remix-run/node';
+import type { LoaderArgs, ActionArgs } from '@remix-run/node';
 import { redirect } from '@remix-run/node';
-import { getUserSession } from '~/utils/session.server';
+import { Form } from '@remix-run/react'
+import { getUserSession, signOut } from '~/utils/session.server';
 
-export const loader = async ({ request }: ActionArgs) => {
+export const loader = async ({ request }: LoaderArgs) => {
   const sessionUser = await getUserSession(request);
   if (!sessionUser) {
     return redirect('/login')
   }
   return null;
 }
+
+export const action = async ({ request }: ActionArgs) => {
+  return signOut(request);
+}
 function Index() {
   return (
-    <div>Admin Page</div>
+    <>
+      <div>Admin Page</div>
+      <Form method="post">
+        <button type="submit">Sign Out</button>
+      </Form>
+    </>
   )
 }
 

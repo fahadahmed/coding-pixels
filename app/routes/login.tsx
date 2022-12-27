@@ -7,7 +7,7 @@ export const action = async ({ request }: ActionArgs) => {
   let formData = await request.formData();
   const { email, password } = Object.fromEntries(formData);
   const { user } = await signIn(email as string, password as string);
-  const token = user.getIdToken();
+  const token = await user.getIdToken();
   return createUserSession(token, '/admin');
 }
 

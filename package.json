@@ -6,7 +6,7 @@
     "deploy": "fly deploy --remote-only",
     "dev": "remix dev",
     "start": "remix-serve build",
-    "emulators:start": "firebase emulators:start --import=./functions/src/data --export-on-exit"
+    "emulators:start": "firebase emulators:start --import=./functions/seed --export-on-exit"
   },
   "dependencies": {
     "@apollo/client": "^3.7.1",
